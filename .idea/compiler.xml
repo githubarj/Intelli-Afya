@@ -9,6 +9,11 @@
         <module name="PatientService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Intelli-Afya" target="1.5" />
+      <module name="PatientService.main" target="21" />
+      <module name="PatientService.test" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
