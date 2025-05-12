@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Intelli-Afya.iml" filepath="$PROJECT_DIR$/Intelli-Afya.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PatientService/PatientService.iml" filepath="$PROJECT_DIR$/PatientService/PatientService.iml" />
     </modules>
   </component>
 </project>
