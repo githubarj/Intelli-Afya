@@ -8,13 +8,15 @@ WORKDIR /app
 COPY pom.xml .
 
 # cache the dependencies unless changes are detected, will make it faster
-RUN mvn depedency:go-offline -B
+RUN mvn dependency:go-offline -B
 
 # copy our source code over
 COPY src ./src
 
 # put everyting in a jar
-RUN mvn clean package
+RUN mvn clean package -e
+
+RUN ls -al /app/target
 
 # is a multi-stage build statement , the second stage uses the build artifact from the builder stage above
 FROM openjdk:21-jdk AS runner
@@ -22,7 +24,8 @@ FROM openjdk:21-jdk AS runner
 WORKDIR /app
 
 # copy the patient-service snapshot jar that was created in the builder step
-COPY --from=builder ./app/target/patient-service-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=builder ./app/target/PatientService-0.0.1-SNAPSHOT.jar ./app.jar
+
 
 EXPOSE 4000
 
