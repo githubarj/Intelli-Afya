@@ -1,0 +1,13 @@
+### This adds a patient to the database
+POST http://localhost:4000/patients
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "testing@gmail.com",
+    "address": "123 main street",
+    "dateOfBirth": "1995-09-09",
+    "registrationDate": "2023-03-04"
+}
+
+###
